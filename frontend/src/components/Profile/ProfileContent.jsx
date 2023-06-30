@@ -58,7 +58,7 @@ const ProfileContent = ({ active }) => {
     formData.append("image", e.target.files[0]);
 
     await axios
-      .put(`${server}/user/update-avatar`, formData, {
+      .put(`${server}/api/v2/user/update-avatar`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -464,7 +464,7 @@ const ChangePassword = () => {
 
     await axios
       .put(
-        `${server}/user/update-user-password`,
+        `${server}/api/v2/user/update-user-password`,
         { oldPassword, newPassword, confirmPassword },
         { withCredentials: true }
       )

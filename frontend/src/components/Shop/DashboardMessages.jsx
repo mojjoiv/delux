@@ -273,7 +273,7 @@ const MessageList = ({
 
     const getUser = async () => {
       try {
-        const res = await axios.get(`${server}/user/user-info/${userId}`);
+        const res = await axios.get(`${server}/api/v2/user/user-info/${userId}`);
         setUser(res.data.user);
       } catch (error) {
         console.log(error);

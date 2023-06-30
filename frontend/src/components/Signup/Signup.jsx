@@ -31,7 +31,7 @@ const Singup = () => {
     newForm.append("password", password);
 
     axios
-      .post(`${server}/user/create-user`, newForm, config)
+      .post(`${server}/api/v2/user/create-user`, newForm, config)
       .then((res) => {
         toast.success(res.data.message);
         setName("");
