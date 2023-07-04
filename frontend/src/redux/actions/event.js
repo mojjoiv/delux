@@ -11,7 +11,7 @@ export const createevent = (newForm) => async (dispatch) => {
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
     const { data } = await axios.post(
-      `${server}/event/create-event`,
+      `${server}/api/v2/event/create-event`,
       newForm,
       config,
     );
@@ -36,7 +36,7 @@ export const getAllEventsShop = (id) => async (dispatch) => {
       });
   
       const { data } = await axios.get(
-        `${server}/event/get-all-events/${id}`
+        `${server}/api/v2/event/get-all-events/${id}`
       );
       dispatch({
         type: "getAlleventsShopSuccess",
@@ -57,7 +57,7 @@ export const deleteEvent = (id) => async (dispatch) => {
         type: "deleteeventRequest",
       })
   
-      const {data} = await axios.delete(`${server}/event/delete-shop-event/${id}`,{
+      const {data} = await axios.delete(`${server}/api/v2/event/delete-shop-event/${id}`,{
         withCredentials: true,
       });
   
@@ -80,7 +80,7 @@ export const deleteEvent = (id) => async (dispatch) => {
         type: "getAlleventsRequest",
       });
 
-      const {data} = await axios.get(`${server}/event/get-all-events`);
+      const {data} = await axios.get(`${server}/api/v2/event/get-all-events`);
       dispatch({
         type: "getAlleventsSuccess",
         payload: data.events,

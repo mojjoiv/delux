@@ -16,7 +16,7 @@ const AllWithdraw = () => {
 
   useEffect(() => {
     axios
-      .get(`${server}/withdraw/get-all-withdraw-request`, {
+      .get(`${server}/api/v2/withdraw/get-all-withdraw-request`, {
         withCredentials: true,
       })
       .then((res) => {

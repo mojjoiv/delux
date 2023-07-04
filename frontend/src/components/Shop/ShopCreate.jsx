@@ -32,7 +32,7 @@ const ShopCreate = () => {
     newForm.append("address", address);
     newForm.append("phoneNumber", phoneNumber);
     axios
-      .post(`${server}/shop/create-shop`, newForm, config)
+      .post(`${server}/api/v2/shop/create-shop`, newForm, config)
       .then((res) => {
         toast.success(res.data.message);
         setName("");

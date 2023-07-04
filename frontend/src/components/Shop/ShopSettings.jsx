@@ -28,7 +28,7 @@ const ShopSettings = () => {
 
     formData.append("image", e.target.files[0]);
     
-    await axios.put(`${server}/shop/update-shop-avatar`, formData,{
+    await axios.put(`${server}/api/v2/shop/update-shop-avatar`, formData,{
         headers: {
             "Content-Type": "multipart/form-data",
         },
@@ -45,7 +45,7 @@ const ShopSettings = () => {
   const updateHandler = async (e) => {
     e.preventDefault();
     
-    await axios.put(`${server}/shop/update-seller-info`, {
+    await axios.put(`${server}/api/v2/shop/update-seller-info`, {
         name,
         address,
         zipCode,

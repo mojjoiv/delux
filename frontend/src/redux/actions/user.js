@@ -7,7 +7,7 @@ export const loadUser = () => async (dispatch) => {
     dispatch({
       type: "LoadUserRequest",
     });
-    const { data } = await axios.get(`${server}/api/v2/api/v2/user/getuser`, {
+    const { data } = await axios.get(`${server}/api/v2/user/getuser`, {
       withCredentials: true,
     });
     dispatch({
@@ -28,7 +28,7 @@ export const loadSeller = () => async (dispatch) => {
     dispatch({
       type: "LoadSellerRequest",
     });
-    const { data } = await axios.get(`${server}/shop/getSeller`, {
+    const { data } = await axios.get(`${server}/api/v2/shop/getSeller`, {
       withCredentials: true,
     });
     dispatch({

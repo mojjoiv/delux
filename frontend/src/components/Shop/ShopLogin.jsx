@@ -17,7 +17,7 @@ const ShopLogin = () => {
 
     await axios
       .post(
-        `${server}/shop/login-shop`,
+        `${server}/api/v2/shop/login-shop`,
         {
           email,
           password,
